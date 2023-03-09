@@ -1,0 +1,149 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  font-family: Roboto;
+
+  background-color: rgb(247, 246, 246);
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-wrap: hidden;
+}
+
+.main {
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.main-container {
+  display: flex;
+}
+.left {
+  flex: 1;
+  background-color: rgb(0, 179, 140);
+  color: white;
+  display: flex;
+  padding: 150px 40px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  opacity: 0.9;
+}
+.right {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  text-align: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+}
+.right h1 {
+  color: rgb(0, 179, 140);
+}
+.right p {
+  font-size: 12px;
+  color: gray;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+.icons .i {
+  padding: 6px 6px;
+  width: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+input {
+  padding: 10px 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  font-family: 'FontAwesome';
+}
+input:before {
+  content: '\f0e0';
+}
+button {
+  background-color: rgb(0, 179, 140);
+
+  padding: 8px 40px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.responsive-content {
+  display: none;
+}
+
+.bottom-round {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.top-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+.home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+
+  transform: translate(-50%, -50%);
+}
+
+@media screen and ((min-width: 460px) and (max-width: 540px)) {
+  .main {
+    width: 95%;
+  }
+  .bottom-round,
+  .top-right {
+    display: none;
+  }
+}
+@media screen and ((max-width: 459px)) {
+  .main {
+    width: 90%;
+  }
+  .left,
+  .bottom-round,
+  .top-right {
+    display: none;
+  }
+  .responsive-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

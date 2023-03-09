@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/signup</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lobster&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bottom-round">
+        <svg width="600" height="50">
+          <!--<circle cx="50" cy="50" r="50" />-->
+          <path d="M0,0 a60,30 0 0,1 0,150" fill="yellow" />
+        </svg>
+      </div>
+      <div class="main">
+        <div class="main-container">
+          <div class="left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info.
+            </p>
+            <button onclick="changelogin()" id="button">SIGN IN</button>
+          </div>
+          <div class="right" id="register">
+            <h1>Create Account</h1>
+            <div class="icons">
+              <div class="i"><i class="fab fa-facebook-f"></i></div>
+              <div class="i"><i class="fab fa-google-plus-g"></i></div>
+              <div class="i"><i class="fab fa-linkedin-in"></i></div>
+            </div>
+            <p>or use your email for registration.</p>
+            <form onsubmit="handleRegister();return false">
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder="&#xf007;  Name"
+              /><br />
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="&#xf0e0;  Email"
+              /><br />
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="&#xf023;   Password"
+              /><br />
+              <button>SIGN UP</button><br />
+              <div class="responsive-content">
+                <p>Already have an account...?</p>
+                <button onclick="changelogin()" id="button">SIGN IN</button>
+              </div>
+            </form>
+          </div>
+          <div class="right" id="login">
+            <h1>Login Account</h1>
+            <div class="icons">
+              <div class="i"><i class="fab fa-facebook-f"></i></div>
+              <div class="i"><i class="fab fa-google-plus-g"></i></div>
+              <div class="i"><i class="fab fa-linkedin-in"></i></div>
+            </div>
+            <p>or use your email for login.</p>
+            <form onsubmit="handleLogin();return false">
+              <input
+                type="text"
+                required
+                id="name1"
+                placeholder="&#xf007;  Name"
+              /><br />
+              <input
+                type="email"
+                id="email1"
+                required
+                placeholder="&#xf0e0;  Email"
+              /><br />
+              <input
+                type="password"
+                required
+                id="password1"
+                placeholder="&#xf023;   Password"
+              /><br />
+              <button>SIGN IN</button><br />
+              <div class="responsive-content">
+                <p>Don't have an account</p>
+                <button onclick="changelogin()" id="button">SIGN UP</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="top-right"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
